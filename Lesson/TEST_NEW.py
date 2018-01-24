@@ -3,7 +3,7 @@
 import os
 import openpyxl
 import MySQLdb
-import re
+
 
 #Constante
 DIR = 'SPEC'
