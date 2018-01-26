@@ -37,6 +37,7 @@ def filter_spec(spec_list, file_name):
                    None, None, None, None, None, None, None, None, None, None, None]
 
     for spec in spec_list:
+
         if spec[0:3] in '02.0':
             korpus_number = spec[0:8]
             korpus_name = filter_korpusa(korpus_number)
@@ -46,6 +47,41 @@ def filter_spec(spec_list, file_name):
         elif spec[0:8] in 'Шкаф ШПТ':
             korpus_name = spec[5:12]
             filter_name[1] = korpus_name
+
+
+
+
+        elif spec[0:13] in 'Греющая секция':
+            filter_name[2] = spec
+
+        elif spec[0:22] in 'Обогрев греющим кабелем':
+            filter_name[2] = spec
+
+        elif spec[0:24] in 'Электронагреватель ЭНВ-ПТ':
+            filter_name[2] = spec
+
+        elif spec[0:24] in '05.17.':
+            filter_name[2] = spec
+
+
+
+
+        elif spec[0:13] in 'Ввод Осналайн':
+            filter_name[4] = spec
+
+        elif spec[0:7] in '04.015.0':
+            filter_name[5] = spec
+
+
+        elif spec[0:7] in '02.06.01':
+            filter_name[6] = spec
+
+
+        elif spec[0:13] in 'Терморегулятор':
+            filter_name[7] = spec
+
+
+
 
 
 
